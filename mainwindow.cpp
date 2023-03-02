@@ -13,8 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     db = QSqlDatabase::addDatabase("QPSQL");
         db.setHostName("localhost");
         db.setDatabaseName("business");
-        db.setUserName("postgres");
-        db.setPassword("123Perecjkee");
+        db.setUserName("db_user");
+        db.setPassword("1q2w3e4r");
         db.setPort(5432);
         if (!db.open()){
             qDebug() << db.lastError().text();
@@ -112,18 +112,20 @@ void MainWindow::on_pushButton_14_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
+
     int selectedRow = ui->tableView->currentIndex().row();
     if(selectedRow >= 0){
         qDebug() << "Deleting row: " << model1->removeRow(selectedRow);
     }else qDebug() << "No row selected";
+
 }
 
 
 void MainWindow::on_pushButton_13_clicked()
 {
-    int selectedRow = ui->tableView->currentIndex().row();
-    if(selectedRow >= 0){
-        qDebug() << "Deleting row: " << model2->removeRow(selectedRow);
+    int selectedRow_2 = ui->tableView_2->currentIndex().row();
+    if(selectedRow_2 >= 0){
+        qDebug() << "Deleting row: " << model2->removeRow(selectedRow_2);
     }else qDebug() << "No row selected";
 }
 
