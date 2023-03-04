@@ -44,23 +44,39 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="32"/>
-        <source>Имя поставщика</source>
-        <translation type="unfinished"></translation>
+        <location filename="mainwindow.cpp" line="53"/>
+        <source>Name of supplier</source>
+        <translation type="unfinished">Имя поставщика</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="33"/>
-        <source>Фамилия поставщика</source>
-        <translation type="unfinished"></translation>
+        <source>surname of supplier</source>
+        <translation type="unfinished">Фамилия поставщика</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="36"/>
-        <source>Незвание компании</source>
-        <translation type="unfinished"></translation>
+        <source>Name of the comapy</source>
+        <translation type="unfinished">Название компании</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="38"/>
-        <source>Цена</source>
-        <translation type="unfinished"></translation>
+        <source>Price</source>
+        <translation type="unfinished">Цена</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="51"/>
+        <source>Breed of tree</source>
+        <translation type="unfinished">Порода древисины</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="55"/>
+        <source>Date of supply</source>
+        <translation type="unfinished">Дата поставки</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="57"/>
+        <source>Volume</source>
+        <translation type="unfinished">Объем</translation>
     </message>
 </context>
 </TS>

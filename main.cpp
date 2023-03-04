@@ -8,9 +8,11 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QTranslator qtTranslator;
-    if(!(qtTranslator.load(QString("QtLanguage_.qm")))){
+    if(!(qtTranslator.load("C:/Users/PEREC/Desktop/QtProjects/Test/QtLanguage_.qm"))){
         qDebug() << QDir::currentPath();
-    } else {qApp->installTranslator(&qtTranslator);}
+    } else { qDebug() << "Translation load";
+        qApp->installTranslator(&qtTranslator);
+    }
 
     MainWindow w;
     w.show();

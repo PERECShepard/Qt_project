@@ -29,13 +29,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView->setModel(model1);
     ui->tableView->resizeColumnToContents(0);
     ui->tableView->resizeColumnToContents(1);
-    model1->setHeaderData(1, Qt::Horizontal, tr("Имя поставщика"));
-    model1->setHeaderData(2, Qt::Horizontal, tr("Фамилия поставщика"));
+    model1->setHeaderData(1, Qt::Horizontal, tr("Name of supplier"));
+    model1->setHeaderData(2, Qt::Horizontal, tr("surname of supplier"));
     ui->tableView->resizeColumnToContents(2);
     ui->tableView->resizeColumnToContents(3);
-    model1->setHeaderData(3, Qt::Horizontal, tr("Незвание компании"));
+    model1->setHeaderData(3, Qt::Horizontal, tr("Name of the comapy"));
     ui->tableView->resizeColumnToContents(4);
-    model1->setHeaderData(4, Qt::Horizontal, tr("Цена"));
+    model1->setHeaderData(4, Qt::Horizontal, tr("Price"));
 
     model2 = new QSqlRelationalTableModel(this, db);
     model2->setEditStrategy(QSqlTableModel::OnManualSubmit);
@@ -47,10 +47,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView_2->setItemDelegate(new QSqlRelationalDelegate(ui->tableView_2));
     ui->tableView_2->setItemDelegate(new QSqlRelationalDelegate(ui->tableView_2));
     ui->tableView_2->resizeColumnToContents(0);
+    model2->setHeaderData(1, Qt::Horizontal, tr("Breed of tree"));
     ui->tableView_2->resizeColumnToContents(1);
+    model2->setHeaderData(2, Qt::Horizontal, tr("Name of supplier"));
     ui->tableView_2->resizeColumnToContents(2);
+    model2->setHeaderData(3, Qt::Horizontal, tr("Date of supply"));
     ui->tableView_2->resizeColumnToContents(3);
+    model2->setHeaderData(4, Qt::Horizontal, tr("Volume"));
     ui->tableView_2->resizeColumnToContents(4);
+
 
 }
 
@@ -63,6 +68,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_tableView_activated(const QModelIndex &index)
 {
     model1->submitAll();
+    ui->retranslateUi(this);
     QSqlQuery query1 = QSqlQuery();
     query1.exec("select * from supliers");
     while(query1.next()){
